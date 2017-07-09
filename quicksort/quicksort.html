@@ -38,6 +38,7 @@
     	    // the result (1 item array) will return to its caller: the yielded list (left or right) before current loop
     	    // each result will be concatenated and finally the whole [] will be put back together in sorted order
     	    return [].concat(quickSort(left), pivot, quickSort(right));
+	    // to reverse the order to [z - a], just swap the left and right in return statement
         };
     
         const sortObj = (obj) => {
