@@ -13,6 +13,8 @@
         // O(N)
         // linear time complexity
         const reverse = ( a ) => {
+            if ( a.length < 2 ) return a;
+
             for (let i = 0, j = a.length - 1; i < a.length; i++) {
                 counter++;
 
