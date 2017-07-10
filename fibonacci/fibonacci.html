@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Fibonacci number</title>
+    </head>
+    <body>
+    <script>
+        document.write("Fibonacci sequence, see results below.<br><br>");
+        // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, ..., 1.7340252117279783e+41, ...
+        
+        let f = [];
+        f[0] = 0;
+        f[1] = 1;
+        let counter = 1;
+        
+        // O(N)
+        // n is the position, start at 1, (not index) in the sequence
+        const fibonacci = ( n ) => {
+            if (n < 2) { return 1; }
+
+            // linear time complexity: for n elements it will require n-1 iterations
+            // this is a better solution compared to the recursive calls below
+            for ( let i = 2; i < n; i++) {
+                counter++;
+                f[i] = f[i-1] + f[i-2];
+            }
+
+            return f.pop();
+        };
+        
+        // O(2^N)
+        // exponential time complexity: for n elements it will require nearly 2~n recursions
+        // the exact recursion = 2 * the calculated Fibonacci value
+        const fibonacci2 = ( n ) => {
+            counter++;
+                
+            if(n <= 3) {
+                return 1;
+            } else {
+                return fibonacci2(n - 1) + fibonacci2(n - 2);
+            }
+        };
+        
+        // O(N)
+        // this essentially equivalent to a for loop
+        // linear time complexity: for n elements it will require n-1 iterations
+        const fibonacci3 = (a, b, n) => { 
+            counter++;
+
+            if(n > 3) { 
+                return fibonacci3(b, a + b, n - 1); 
+            }
+            else {
+                return a + b; 
+            }
+        };
+        
+        document.write(fibonacci(10));
+        //document.write(fibonacci2(10));
+        //document.write(fibonacci3(0,1,10));
+        document.write("<br> counter -> " + counter);
+    </script>
+    </body>
+</html>
