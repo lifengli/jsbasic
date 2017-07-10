@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Reverse array</title>
+    </head>
+    <body>
+    <script>
+        document.write("Reverse an array, see results below.<br><br>");
+        
+        let counter = 0;
+        const list = [5, 2, 7, 9, 0, 4, 1];
+        const list2 = ['g', 'p', 'a', 'i', 'o', 'c'];
+        
+        // O(N)
+        // linear time complexity
+        const reverse = ( a ) => {
+            for (let i = 0, j = a.length - 1; i < a.length; i++) {
+                counter++;
+
+                if (j >= i) {
+                   let swap = a[i];
+                   a[i] = a[j];
+                   a[j] = swap;
+                   j--;
+                }
+            }
+                
+            return a;
+        };
+        
+        document.write(reverse(list));
+        //document.write(reverse(list2));
+        document.write("<br><br>counter => " + counter);
+    </script>
+    </body>
+</html>
