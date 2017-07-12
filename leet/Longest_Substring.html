@@ -30,10 +30,7 @@
                         s = swap;
                     }
                     start = swap.indexOf(str[i+1]) + 1;
-                    
-                    if(str[i]){
-                        swap = swap.substr(start, i);
-                    }
+                    swap = swap.substr(start, i);
                 }
             }
             return swap.length > s.length ? swap : s;
