@@ -17,3 +17,5 @@ Basic algorithms in Javascript
 ## Leet questions
 > Longest Substring Without Repeating Characters
 
+> Longest Palindromic Substring
+
