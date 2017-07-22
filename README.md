@@ -19,3 +19,5 @@ Basic algorithms in Javascript
 
 > Longest Palindromic Substring
 
+## Miscellaneous
+> Missing Chars
