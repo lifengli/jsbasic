@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Binary Search</title>
+    </head>
+    <body>
+    <script>
+        document.write("Binary Search <br><br>");
+        
+        const x = 2300; //value to search for
+        let counter = 0; //number of iterations
+        let list = [];  //search list
+        for (let i=0; i<2500; i++){
+            list.push(i);
+        }
+        
+        //O(log N)
+        const binarysearch = (list, x) => {
+            let l = 0;  //start at index 0
+            let h = list.length;  //high point, length of the search list
+
+            const binary = (idx) => {
+                switch (true) {
+                    case list[idx] > x:
+                        return true; 
+                    break;
+                    case list[idx] < x:
+                        return false; 
+                    break;
+                    default:
+                        return idx;
+                    break;
+                }
+            };
+            
+            while (l < h) {
+                counter++;
+                let m = l + parseInt((h-l)/2); //if odd number, set to middle; even number, set to 1 index to the right
+                
+                if(typeof binary(m) === 'number') {
+                    return m;
+                } else if (binary(m)) {
+                    h = m; //move high point to middle
+                } else {
+                    l = m + 1; //move low point to 1 index right of middle 
+                }
+            }
+            //if not found
+            return -1;
+        };
+
+        document.write("binary search: x is at index -> " + binarysearch(list, x) + "<br><br>");
+        document.write("to get an idea, number of iterations = log2 2300 -> " + counter + "<br><br>");
+        document.write("to find 199, use 2499-199 to calculate => log2 2300: they have the same distance from middle.");
+    </script>
+    </body>
+</html>

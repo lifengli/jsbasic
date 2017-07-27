@@ -13,6 +13,8 @@ Basic algorithms in Javascript
 
 > Reverse array
 
+## Search
+> Binary Search
 
 ## Leet questions
 > Longest Substring Without Repeating Characters
