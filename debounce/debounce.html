@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Debounce</title>
+        <style>
+        div {
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+        }
+        </style>
+    </head>
+    <body>
+        <div onscroll="scrolling()">
+            Debounce scrolling<br><br>
+            Debounce scrolling<br><br>
+            Debounce scrolling<br><br>
+            Debounce scrolling<br><br>
+            Debounce scrolling<br><br>
+            Debounce scrolling<br><br>
+        </div>
+        <p>Scrolled <span id="demo">0</span> times</p>
+        <script>
+            document.write("Debounce scrolling: wait 0.5 seconds between scrolling to see number updates <br><br>");
+            document.write("If you're keep scrolling, the number will not update.");
+            let counter = 0;
+
+            const debounce = (fn, wait) => {
+                let timeout;
+                return () => {
+                    const context = this;
+                    //every time debounce being called, clear defined timeout
+                    clearTimeout(timeout);
+                    //restart the clock...
+                    timeout = setTimeout(
+                        () => {
+                            //reset it
+                            timeout = null;
+                            fn.apply(context, context.arguments);
+                        }, 
+                        wait
+                    );
+                };
+            };
+            
+            const scrolling = debounce(() => {
+                document.getElementById("demo").innerHTML = counter += 1;
+            }, 500);
+        </script>
+    </body>
+</html>

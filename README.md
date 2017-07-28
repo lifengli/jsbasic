@@ -22,6 +22,8 @@ Basic algorithms in Javascript
 ## Miscellaneous
 > Fibonacci
 
+> Debounce
+
 > Reverse array
 
 > Missing Chars
