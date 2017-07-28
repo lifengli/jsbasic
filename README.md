@@ -7,11 +7,9 @@ Basic algorithms in Javascript
 [![Pull](https://img.shields.io/badge/pull%20request-welcome-ff69b4.svg)](https://github.com/lifengli/uiserver)
 
 ## Sorting
-> Fibonacci
-
 > Quick sort an object
 
-> Reverse array
+> Selection sort
 
 ## Search
 > Binary Search
@@ -22,4 +20,8 @@ Basic algorithms in Javascript
 > Longest Palindromic Substring
 
 ## Miscellaneous
+> Fibonacci
+
+> Reverse array
+
 > Missing Chars
