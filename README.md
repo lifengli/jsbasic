@@ -11,6 +11,8 @@ Basic algorithms in Javascript
 
 > Selection sort
 
+> Insertion sort
+
 ## Search
 > Binary Search
 
