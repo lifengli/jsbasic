@@ -35,3 +35,5 @@ Basic algorithms in Javascript
 > Reverse array
 
 > Missing Chars
+
+> Recursive powers
