@@ -21,6 +21,8 @@ Basic algorithms in Javascript
 
 > Longest Palindromic Substring
 
+> Basic Palindromic String
+
 > Two sums
 
 ## Miscellaneous
