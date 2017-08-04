@@ -21,6 +21,8 @@ Basic algorithms in Javascript
 
 > Longest Palindromic Substring
 
+> Two sums
+
 ## Miscellaneous
 > Fibonacci
 
