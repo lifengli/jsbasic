@@ -13,6 +13,8 @@ Basic algorithms in Javascript
 
 > Insertion sort
 
+> Merge sort
+
 ## Search
 > Binary Search
 
@@ -34,6 +36,6 @@ Basic algorithms in Javascript
 
 > Reverse array
 
-> Missing Chars
+> Missing chars
 
 > Recursive powers
