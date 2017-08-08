@@ -9,6 +9,8 @@ Basic algorithms in Javascript
 ## Sorting
 > Quick sort an object
 
+> Quick sort basic
+
 > Selection sort
 
 > Insertion sort
