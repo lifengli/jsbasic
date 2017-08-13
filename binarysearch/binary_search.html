@@ -16,36 +16,25 @@
         const binarysearch = (list, x) => {
             let l = 0;  //start at index 0
             let h = list.length;  //high point, length of the search list
-
-	    //just another way, we can do the same within the while loop
-            const binary = (idx) => {
-                switch (true) {
-                    case list[idx] > x:
-                        return true; 
-                    break;
-                    case list[idx] < x:
-                        return false; 
-                    break;
-                    default:
-                        return idx;
-                    break;
-                }
-            };
-            
-	    //to get an idea, the number of iterations needed to find the match => log2 2300
-	    //e.g. to find 199, use 2499-199 to calculate => log2 2300: they have the same distance from middle.
+           
+            //to get an idea, the number of iterations needed to find the match => log2 2300
+            //e.g. to find 199, use 2499-199 to calculate => log2 2300: they have the same distance from middle.
             while (l < h) {
                 let m = l + parseInt((h-l)/2); //if odd number, set to middle; even number, set to 1 index to the right
                 
-                if(typeof binary(m) === 'number') {
-                    return m;
-                } else if (binary(m)) {
-                    h = m; //move high point to middle
-                } else {
-                    l = m + 1; //move low point to 1 index right of middle 
+                switch (true) {
+                    case list[m] > x:
+                        h = m; 
+                    break;
+                    case list[m] < x:
+                        l = m + 1; 
+                    break;
+                    default:
+                        return m;
+                    break;
                 }
             }
-            //if not found
+
             return -1;
         };
 
