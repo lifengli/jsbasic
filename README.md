@@ -41,3 +41,5 @@ Basic algorithms in Javascript
 > Missing chars
 
 > Recursive powers
+
+> Decimal and Binary conversion
