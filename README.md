@@ -43,3 +43,5 @@ Basic algorithms in Javascript
 > Recursive powers
 
 > Decimal and Binary conversion
+
+> Implement get elements by class name method

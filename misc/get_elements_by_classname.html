@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Implement get elements by class name method</title>
+        <style type="text/css">
+            html, body{
+                height: 100%; text-align:center;
+                font-size:1.0em; /* font-size 1em = 10px on default browser settings */
+            }
+            h2{
+              color:#ccc; margin:20px 0 30px 0;
+            }
+            ul{
+              margin-left:0; padding:0;
+            }
+            ul li{
+              list-style-type:none; display:inline; padding:20px; font-size:1.4rem;
+            }
+            li.blue{
+              color:blue;
+            }
+            li.red{
+              color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Implement get elements by class name method</h2>
+        <ul>
+            <li class="blue">blue</li>
+            <li class="blue">blue</li>
+            <li class="red">red</li>
+            <li class="red">red</li>
+            <li class="red">red</li>
+            <li class="blue">blue</li>
+            <li class="red">red</li>
+            <li class="red">red</li>
+            <li class="blue">blue</li>
+            <li class="red">red</li>
+        </ul>
+
+        <form>
+            <input type="radio" name="getelem" value="red">RED</input>
+            <input type="radio" name="getelem" value="blue">BLUE</input>
+        </form>
+
+        <button onclick="getElements()">getElementsByClassName</button>
+
+        <script type="text/javascript">
+            const getElementsByClass = (searchClass, domNode, tagName) => {
+                if (domNode === undefined) domNode = document;
+                if (tagName === undefined) tagName = '*';
+                
+                let test = "";
+                const el = new Array();
+                const cls = " "+searchClass+" ";
+                const tags = domNode.getElementsByTagName(tagName);
+                
+                for(let i=0,j=0; i<tags.length; i++) { 
+                    test = " " + tags[i].className + " ";
+                    if (test.indexOf(cls) > -1) 
+                        el[j++] = tags[i];
+                } 
+                return el;
+            };
+
+            const getElements = () => {
+                //reset element style
+                const reset = document.getElementsByTagName("LI");
+                for(let re=0; re<reset.length; re++){
+                    reset[re].style.fontSize = "1.4rem";
+                    reset[re].style.textDecoration = "none";
+                }
+    
+                let elem = document.getElementsByName('getelem');
+                let elem_cls, matched_elems;
+                for(let i = 0; i < elem.length; i++){
+                    if(elem[i].checked){
+                        elem_cls = elem[i].value;
+                    }
+                }
+    
+                matched_elems = getElementsByClass(elem_cls);
+
+                for(let i=0; i<matched_elems.length; i++){
+                    matched_elems[i].style.fontSize = "2.0rem";
+                    matched_elems[i].style.textDecoration = "underline";
+                }
+            };
+        </script>
+    </body>
+</html>
