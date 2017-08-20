@@ -17,6 +17,8 @@ Basic algorithms in Javascript
 
 > Merge sort
 
+> Bubble sort
+
 ## Search
 > Binary Search
 
