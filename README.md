@@ -31,6 +31,8 @@ Basic algorithms in Javascript
 
 > Two sums
 
+> Reverse 32-bit signed integer
+
 ## Miscellaneous
 > Fibonacci
 
