@@ -33,6 +33,8 @@ Basic algorithms in Javascript
 
 > Reverse 32-bit signed integer
 
+> ZigZag Conversion
+
 ## Miscellaneous
 > Fibonacci
 
