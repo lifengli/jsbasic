@@ -26,7 +26,7 @@
                 while(j < str.length) {
                     //loop incrementally based on n
                     for(j = i+n; i < j; i++){
-                        x = (i+n)%(j);
+                        let x = (i+n)%(j);
                         array[x].push(str[i]);
                     }
                     //zigzag: the item right after (c -> const), c*n, will be placed on the zigzag position
