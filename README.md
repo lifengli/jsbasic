@@ -6,6 +6,9 @@ Basic algorithms in Javascript
 [![Maintenance](https://img.shields.io/badge/maintained-yes-orange.svg)](https://github.com/lifengli/uiserver)
 [![Pull](https://img.shields.io/badge/pull%20request-welcome-ff69b4.svg)](https://github.com/lifengli/uiserver)
 
+## Design
+> Prototypal Inheritance
+
 ## Sorting
 > Quick sort an object
 
