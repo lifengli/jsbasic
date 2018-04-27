@@ -14,7 +14,7 @@ const fibonacci = ( n ) => {
 // O(N^2)
 // exponential time complexity: for n elements it will require nearly 2~n recursions
 // the exact recursion = 2 * the calculated Fibonacci value
-// if index start at 0, use if(n<3)
+// if index start at 0, use if(n < 3)
 const fibonacci2 = ( n ) => {
     if(n <= 3) {
         return 1;
@@ -27,12 +27,12 @@ const fibonacci2 = ( n ) => {
 // this essentially equivalent to a for loop
 // linear time complexity: for n elements it will require n-1 iterations
 // if index start at 0, use if(n >= 3)
-const fibonacci3 = (a, b, n) => { 
-    if(n > 3) { 
-        return fibonacci3(b, a + b, n - 1); 
+const fibonacci3 = (a, b, n) => {
+    if(n-- > 3) {
+        return fibonacci3(b, a + b, n);
     }
     else {
-        return a + b; 
+        return a + b;
     }
 };
 
@@ -40,7 +40,7 @@ const fibonacci3 = (a, b, n) => {
 // if index start at 0, use (n-- >= 2)
 const fibonacci4 = (n) => {
     let first = 0, second = 1;
-    while(n-- > 2){
+    while(n-- >= 3){
         [first, second] = [second, first + second];
     }
     return second;
