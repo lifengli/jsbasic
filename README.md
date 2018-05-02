@@ -9,23 +9,7 @@ Basic algorithms in Javascript
 ## Design
 > Prototypal Inheritance
 
-## Sorting
-> Quick sort an object
-
-> Quick sort basic
-
-> Selection sort
-
-> Insertion sort
-
-> Merge sort
-
-> Bubble sort
-
-## Search
-> Binary Search
-
-## Leet questions
+## Leet
 > Longest Substring Without Repeating Characters
 
 > Longest Palindromic Substring
@@ -54,3 +38,19 @@ Basic algorithms in Javascript
 > Decimal and Binary conversion
 
 > Implement get elements by class name method
+
+## Search
+> Binary Search
+
+## Sort
+> Quick sort an object
+
+> Quick sort basic
+
+> Selection sort
+
+> Insertion sort
+
+> Merge sort
+
+> Bubble sort
