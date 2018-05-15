@@ -21,8 +21,8 @@
         </div>
         <p>Scrolled <span id="demo">0</span> times</p>
         <script>
-            document.write("Debounce scrolling: wait 0.5 seconds between scrolling to see number updates <br><br>");
-            document.write("If you're keep scrolling, the number will not update.");
+            console.log("Debounce scrolling: wait 0.5 seconds between scrolling to see number updates <br><br>");
+            console.log("If you're keep scrolling, the number will not update.");
             let counter = 0;
 
             const debounce = (fn, wait) => {

@@ -4,8 +4,6 @@
     </head>
     <body>
     <script>
-        document.write("Prototypal Inheritance <br><br>");
-        
         //base circle object
         const circle = {
             radius: 5,
@@ -66,33 +64,33 @@
         //1. directly clone circle
         const c2 = Object.create(circle);
         c2.radius = 10;
-        document.write("c2 area -> " + c2.area() + "<br><br>");
-        document.write("c2 circumference -> " + c2.circumference() + "<br><br>");
+        console.log("c2 area -> " + c2.area() + "<br><br>");
+        console.log("c2 circumference -> " + c2.circumference() + "<br><br>");
         
         //2. through combined object
         const c3 = circle.create(20);
-        document.write("c3 area -> " + c3.area() + "<br><br>");
-        document.write("c3 circumference -> " + c3.circumference() + "<br><br>");
+        console.log("c3 area -> " + c3.area() + "<br><br>");
+        console.log("c3 circumference -> " + c3.circumference() + "<br><br>");
         
         //3. inherit privileged methods and private data
         const shape01 = shape();
         shape01.publicIt();
-        document.write("protected square area -> " + shape01.getShape().square.area() + "<br><br>");
-        document.write("protected square circumference -> " + shape01.getShape().square.circumference() + "<br><br>");
+        console.log("protected square area -> " + shape01.getShape().square.area() + "<br><br>");
+        console.log("protected square circumference -> " + shape01.getShape().square.circumference() + "<br><br>");
         
         //4. inherit privileged methods and private data and change the values
         const newSquare = shape01.getShape().square.create(10);
-        document.write("updating protected square area -> " + newSquare.area() + "<br><br>");
-        document.write("updating protected square circumference -> " + newSquare.circumference() + "<br><br>");
+        console.log("updating protected square area -> " + newSquare.area() + "<br><br>");
+        console.log("updating protected square circumference -> " + newSquare.circumference() + "<br><br>");
         
         //5. protect privileged methods and private data
         shape01.privateIt();
         const private_shape = shape01.getShape().square ? shape01.getShape().square.circumference() : shape01.getShape().err;
-        document.write("hide protected private data -> " + private_shape + "<br><br>");
+        console.log("hide protected private data -> " + private_shape + "<br><br>");
         
         //6. privileged methods and private data are not accessible from outside
         const shape02 = shape();
-        document.write("private data are not accessible from outside -> " + shape02.square + "<br><br>");
+        console.log("private data are not accessible from outside -> " + shape02.square + "<br><br>");
     </script>
     </body>
 </html>
