@@ -42,6 +42,8 @@ Basic algorithms in Javascript
 ## Search
 > Binary Search
 
+> Graph Search BFS
+
 ## Sort
 > Quick sort an object
 
