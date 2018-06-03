@@ -1,5 +1,5 @@
 const nums = [2, 4, 7, 11, 15, 18, 22, 25, 29, 32, 36, 40, 45, 50, 100];
-const target = 150;
+const target = 54;
 
 //O(N)
 const twoSum = (nums, target) => {
@@ -19,6 +19,7 @@ const twoSum = (nums, target) => {
 
 //O(N) - better
 const twoSum1 = (list, target) => {
+    const result = [];
     const checker = new Set();
 
     for(let i = 0; i < list.length; i++){
@@ -26,13 +27,14 @@ const twoSum1 = (list, target) => {
         const match = target - one;
 
         if(checker.has(match)){
-	    return [list.indexOf(match), i];
+            //return all matches
+	    result.push([list.indexOf(match), i]);
 	}
 
         checker.add(one);
     }
 
-    return false;
+    return result.length > 0 ? result : false;
 };
 
 //O(N^2) - don't do this
