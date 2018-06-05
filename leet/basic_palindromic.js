@@ -15,3 +15,24 @@ const isPalindrome = function(str) {
 };
 
 isPalindrome(str1);
+
+//check permutation use Set
+const str = "aabbccddee77g";
+
+const stringPermutationPalindrome = (str) => {
+  const checker = new Set();
+
+  for(let i=0; i<str.length; i++){
+    let char = str[i];
+
+    if(checker.has(char)){
+      checker.delete(char);
+    } else {
+      checker.add(char);
+    }
+  }
+
+  return checker.size <= 1;
+};
+
+console.log(stringPermutationPalindrome(str));
