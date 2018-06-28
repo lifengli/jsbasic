@@ -11,7 +11,7 @@ const fibonacci = ( n ) => {
     return f.pop();
 };
 
-// O(N^2)
+// O(2^N)
 // exponential time complexity: for n elements it will require nearly 2~n recursions
 // the exact recursion = 2 * the calculated Fibonacci value
 // if index start at 0, use if(n < 3)
@@ -56,3 +56,22 @@ const fibonacci5 = (n, m={}) => {
 
     return fib;
 };
+
+//O(N) class and memorize
+class Fibnacci6 {
+  constructor() {
+    this.memo = {};
+  }
+
+  fib6(n) {
+    if(n < 0){ throw new Error('cannot be negative'); }
+    else if(n === 0 || n === 1){ return n; }
+
+    if(this.memo.hasOwnProperty(n)){ return this.memo[n]; }
+
+    let sum = this.fib6(n-1) + this.fib6(n-2);
+    this.memo[n] = sum;
+
+    return sum;
+  }
+}
